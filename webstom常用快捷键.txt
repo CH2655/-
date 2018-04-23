@@ -1,0 +1,12 @@
+ctrl+shift+N 通过文件名快速查找项目内的文件
+ctrl+R       文件内代码替换
+ctrl+shift+S 复制当前文件
+ctrl+shift+A 快速查找并使用编辑器所有功能
+ctrl+alt+s   打开配置窗口
+ctrl+F4	     关闭当前代码选项卡
+ctrl+W       选中单词
+ctrl+D       复制当前行
+ctrl+Y       删除一行
+alt+J        选中相同代码
+alt+Insert   新建一个文件或其他
+shift+enter  重新开始一行（无论光标在哪个位置）

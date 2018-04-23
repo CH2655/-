@@ -1,0 +1,55 @@
+Git介绍
+	Git是目前世界上最先进的分布式版本控制系统
+
+1.从git服务器上下载项目到本地
+	（1）创建一个项目文件夹，然后右键Git Bash Here,进入到命令行
+	（2）git init 初始化
+	（3）git pull https://github.com/CH2655/agl（下载到本地的项目的地址） 
+2.将本地项目上传到github上面
+	（1） 第一次上传需要一个SSH密钥来认证
+	      认证之前在本地生成SSH Key之前需要登录自己的账号和邮箱
+	      输入命令：git config --global user.name "Your Real Name"
+			git config --global user.email you@email.address
+	（2） 生成密钥
+	      输入命令：ssh-keygen -C 'your@email.address' -t rsa
+	      然后要你输入SSH密匙的存放位置，可以不管，直接回车使用默认路径。再输入你想	要的密码，SSH key就生成了。现在你需要将这个Key提交到GitHub，首先打开Key保存的位	置，里面会有三个文件，找到id_rsa.pub，用文本编辑器打开，复制里面的全部字符。到	GitHub，在右上方工具栏里找到Account Settings。在这个页面上有一个SSH Public Keys	标签，选择Add another public key。Title可以随便填一个，Key就粘贴刚才的字符，提交。
+	（3） 正式开始上传项目
+	      ①初始化仓库
+			执行命令git init
+	      ②将项目所有文件添加到仓库中	
+			执行命令git add .    (如果想添加某个特定的文件，只需把.换成特定的文件名即可)
+	      ③将add的文件commit到仓库
+			执行命令git commit -m "注释语句"
+	      ④去github上创建自己的项目，取好项目名称之后点击Create Repository即可进入到创建好的新的项目的路径下https://github.com/CH2655/study 或git@github.com:CH2655/study.git
+	      ⑤将本地的仓库关联到github上
+			执行命令 git remote add origin https://github.com/hanhailong/CustomRatingBar
+				后面的路径就是第④步获取的路径
+	      ⑥上传到服务器
+			执行命令git push origin master,即可上传成功
+3.本地的项目修改之后再次提交到github上
+	      （1）可以通过git status命令查看哪个文件进行了修改（不查也可以）
+	      （2）将更改的文件添加到仓库中
+			git add "文件 名称"  或者可以把所有的文件都再添加一次 git add .
+	      （3）将add的文件commit到仓库
+			git commit -m "注释语句"
+	      （4）将本地仓库的文件上传到github服务器上	
+			git push origin master
+			如果不能上传成功，在执行一下本地仓库与服务器建立连接的语句，即2中的（3）⑤即可
+
+4.将服务器中的代码更新到本地
+	（1）直接git pull origin master 即可
+
+5.更改多个版本的文件还原某一版本
+	“”
+
+
+参考网址
+	https://zhidao.baidu.com/question/1925885591182532307.html?fr=iks&word=github%CC%E1%BD%BB%B5%D8%D6%B7&ie=gbk
+
+	http://blog.csdn.net/hanhailong726188/article/details/46738929
+	
+	http://blog.csdn.net/hcbbt/article/details/11651229/
+
+	http://blog.csdn.net/lvkelly/article/details/54668378
+	
+	https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
